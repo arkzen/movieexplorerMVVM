@@ -1,4 +1,4 @@
-package com.example.moovieapp;
+package com.darkzen.exploremovies;
 
 import org.junit.Test;
 
