@@ -32,30 +32,30 @@ public class MovieRepository {
         return instance;
     }
 
-    public MutableLiveData<List<Result>> getMovielist(){
+    public MutableLiveData<List<Result>> getMovielist() {
 
-        if (mLivedata==null){
-            mLivedata=new MutableLiveData();
+        if (mLivedata == null) {
+            mLivedata = new MutableLiveData();
         }
 
-        ApiServices apiServices= RetrofitInstanse.getRetrofitInstanse().create(ApiServices.class);
-         Call<MovieModelClass> call =apiServices.getTopratedMovieList();
-         call.enqueue(new Callback<MovieModelClass>() {
-             @Override
-             public void onResponse(Call<MovieModelClass> call, Response<MovieModelClass> response) {
+        ApiServices apiServices = RetrofitInstanse.getRetrofitInstanse().create(ApiServices.class);
+        Call<MovieModelClass> call = apiServices.getTopratedMovieList();
+        call.enqueue(new Callback<MovieModelClass>() {
+            @Override
+            public void onResponse(Call<MovieModelClass> call, Response<MovieModelClass> response) {
 
-                 movieModelClass=response.body();
-                 mresult=movieModelClass.getResults();
-                 mLivedata.postValue(mresult);
+                movieModelClass = response.body();
+                mresult = movieModelClass.getResults();
+                mLivedata.postValue(mresult);
 
-             }
+            }
 
-             @Override
-             public void onFailure(Call<MovieModelClass> call, Throwable t) {
+            @Override
+            public void onFailure(Call<MovieModelClass> call, Throwable t) {
 
-             }
-         });
-         return mLivedata;
+            }
+        });
+        return mLivedata;
 
     }
 }
