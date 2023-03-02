@@ -32,7 +32,7 @@ public class MovieRepository {
         return instance;
     }
 
-    public MutableLiveData<List<Result>> getMovielist() {
+    public MutableLiveData<List<Result>> getTopRatedMovielist() {
 
         if (mLivedata == null) {
             mLivedata = new MutableLiveData();
