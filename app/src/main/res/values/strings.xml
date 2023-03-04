@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">MoovieApp</string>
+    <string name="app_name">MovieExploreApp</string>
+    <string name="demo_text">Demo Text</string>
+
 </resources>
