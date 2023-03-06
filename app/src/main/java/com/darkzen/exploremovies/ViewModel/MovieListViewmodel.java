@@ -8,6 +8,7 @@ import androidx.lifecycle.LiveData;
 
 import com.darkzen.exploremovies.Service.Model.Result;
 import com.darkzen.exploremovies.Service.Repository.MovieRepository;
+import com.darkzen.exploremovies.Service.Repository.MovieRepositoryImpl;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class MovieListViewmodel extends AndroidViewModel {
     MovieRepository mRepo;
     public MovieListViewmodel(@NonNull Application application) {
         super(application);
-        mRepo=MovieRepository.getInstance(application);
+        mRepo= MovieRepositoryImpl.getInstance(application);
     }
 
     public LiveData<List<Result>> getTopratedMovieList(){
