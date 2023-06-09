@@ -1,5 +1,5 @@
 # MovieList App
-The MovieList App is a production level Android project that uses proper MVVM architecture and implements various Android components such as RecyclerView, Retrofit, LiveData, and Glide to fetch and display the top rated movies using the TMDB API.
+Thi is a production level Android project that uses proper MVVM architecture and implements various Android components such as RecyclerView, Retrofit, LiveData, and Glide to fetch and display the top rated movies using the TMDB API.
 
 ## Features
 
